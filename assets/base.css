@@ -6,16 +6,21 @@
 .select__moedas:hover{
     background-color: #a239ca;
 }
+
 .corpo{
     font-family: 'Montserrat', sans-serif;
     background-color: #0E0B16; 
     color: #E7DFDD;
 }
 .botoes{
-    background-color: #4717F6;
+    background-color: #4717F6 !important;
+    border-color: #4717F6   !important  ;
     line-height: 2rem;
 }
 .botoes:hover{
-    background-color: #a239ca;
-    
+    background-color: #a239ca !important;
+    border-color: #a239ca !important;
+}
+.botoes:focus{
+    box-shadow: 0 0 0 0.25rem #4717F6 !important;
 }

@@ -2,7 +2,7 @@
 
 const botaoConverter = document.getElementById("btnConverter");
 const resultado = document.getElementById("btnResult");
-resultado.disabled = true;
+
 botaoConverter.addEventListener("click", converteMoeda)
 function converteMoeda() {
 
@@ -33,13 +33,13 @@ function converteMoeda() {
 }
 
 function exibeResultado(tipoDeMoeda, valor) {
-    const resultado = document.getElementById("btnResult");
-   
+    const resultado = document.getElementById("btnResult"); 
+    
     if (tipoDeMoeda == "BRL") {
-        resultado.innerText = `R$${valor}`;
+        resultado.innerText = parseFloat(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     } else if (tipoDeMoeda == "USD") {
-        resultado.innerText = `$${valor}`;
+        resultado.innerText = parseFloat(valor).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
     } else if (tipoDeMoeda == "EUR")
-        resultado.innerText = `${valor}€`;
+        resultado.innerText = parseFloat(valor).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
 
 }
