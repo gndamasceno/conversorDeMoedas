@@ -8,73 +8,53 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/base.css">
 </head>
 
-<body class="d-flex flex-column align-items-center">
-    <header class="container">
+<body class="corpo d-flex flex-column align-items-center">
+    <header class="header container">
         <h1 class="display-1  text-center my-5">Conversor de moedas</h1>
     </header>
-
-    <main id="main" class="container">
-        <section id="selecaoMoedas d-flex flex-column align-items-center" class="teste">
+    <main class="main container">
+        <section class="main__selecaoMoedas">
             <h2 class="text-center">Selecione as moedas</h2>
-            <div id="tiposMoeda">
+            <div class="selecaoMoedas__tiposDeMoeda">
                 <div class="container">
-                    <div class="row align-items-end">
+                    <div class="selecaoMoedas_moedaEntrada row align-items-end">
                         <div class="col-xs my-3 d-flex justify-content-center">
-                             <select id="selectEntrada" class="select__moedas form-select form-select-sm " aria-label=".form-select-sm example">
+                            <select id="selectEntrada"
+                                class="select__moedas select__moedas--Entrada form-select form-select-sm "
+                                aria-label=".form-select-sm example">
                                 <option selected value="BRL">BRL</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
-                              </select>
-                              
-                            <!-- <div id="dropdown1" class="dropdown text-center">
-                                <button class="btn btn-secondary btn-sm btn-primary text-nowrap" type="button"
-                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Moeda de Entrada
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-sm-start"
-                                    aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">BRL</a></li>
-                                    <li><a class="dropdown-item" href="#">EUR</a></li>
-                                    <li><a class="dropdown-item" href="#">USD</a></li>
-                                </ul>
-                            </div> -->
+                            </select>
                         </div>
-                        <div class="col-xs my-3 d-flex justify-content-center ">
-                            <select id="selectSaida" class="select__moedas form-select form-select-sm " aria-label=".form-select-sm example">
+                        <div class="selecaoMoedas__moedaSaida col-xs my-3 d-flex justify-content-center ">
+                            <select id="selectSaida"
+                                class="select__moedas select__moedas--Saida form-select form-select-sm "
+                                aria-label=".form-select-sm example">
                                 <option selected value="BRL">BRL</option>
                                 <option value="USD">USD</option>
                                 <option value="EUR">EUR</option>
-                              </select>
-                            <!-- <div class="dropdown text-center">
-                                <button class="btn btn-secondary btn-sm btn-primary text-nowrap" type="button"
-                                    id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Moeda de Saída
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-sm-start"
-                                    aria-labelledby="dropdownMenuButton2">
-                                    <li><a class="dropdown-item" href="#">BRL</a></li>
-                                    <li><a class="dropdown-item" href="#">EUR</a></li>
-                                    <li><a class="dropdown-item" href="#">USD</a></li>
-                                </ul>
-                            </div>
-                        </div> -->
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
-        <section id="insercao">
+        <section class="main__insercao">
             <h2 class="text-center">Digite o valor desejado</h2>
             <div class="text-center">
                 <input id="valorInserido" type="text" class=" m-3"></input>
-                <button id="btnConverter" class="botoes m3-3 btn-primary" data-btnConvert>Converter</button>
+                <button id="btnConverter" class="botoes inserir m3-3 btn-primary" data-btnConvert>Converter</button>
             </div>
         </section>
-        <section id="resultado">
+        <section class="main__resultado">
             <div class="text-center">
-                <button id="btnResult" class="resultado my-3 btn-primary" data-result >Resultado</button>
+                <button id="btnResult" class="botoes resultado my-3 btn-primary" data-result>Resultado</button>
             </div>
         </section>
     </main>

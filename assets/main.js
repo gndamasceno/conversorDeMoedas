@@ -1,13 +1,15 @@
 "use strict"
 
 const botaoConverter = document.getElementById("btnConverter");
-
+const resultado = document.getElementById("btnResult");
+resultado.disabled = true;
 botaoConverter.addEventListener("click", converteMoeda)
 function converteMoeda() {
+
     const moedaEntrada = document.getElementById("selectEntrada").value;
     const moedaSaida = document.getElementById("selectSaida").value;
     const valor = document.getElementById("valorInserido").value;
-    const resultado = document.getElementById("btnResult");
+    
     let conversao = 0;
 
     if (moedaEntrada === moedaSaida) {
