@@ -16,7 +16,7 @@ function converteMoeda() {
         exibeResultado(moedaSaida, valor)
     }
     else {
-        fetch(`http://economia.awesomeapi.com.br/json/last/${moedaEntrada}-${moedaSaida}`)
+        fetch(`https://economia.awesomeapi.com.br/json/last/${moedaEntrada}-${moedaSaida}`)
             .then(T => T.json())
             .then(resposta => {
                 for (const cotacoes in resposta) {
